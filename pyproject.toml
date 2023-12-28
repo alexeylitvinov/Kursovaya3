@@ -7,6 +7,9 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+g = "^0.0.3"
+develop = "^0.2.1"
+pytest = "^7.4.3"
 
 
 [build-system]
