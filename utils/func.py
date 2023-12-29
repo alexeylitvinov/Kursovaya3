@@ -25,7 +25,7 @@ def get_last_transaction(file_name) -> list:
 
 def get_data_description(transaction: dict) -> str:
     """
-    Переводит дату из словаря в формат ДД.ММ.ГГГГ и  возвращает в строке дату и операцию
+    Переводит дату из словаря в формат ДД.ММ.ГГГГ и возвращает в строке дату и операцию
     :param transaction: dict
     :return: str
     """
