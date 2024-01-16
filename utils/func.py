@@ -1,5 +1,4 @@
 import json
-import os.path
 from datetime import datetime
 
 
@@ -12,7 +11,7 @@ def get_last_transaction(file_name) -> list:
     """
     data_base = []
     last_transaction = []
-    with open(os.path.abspath(file_name), 'r', encoding='utf-8') as file:
+    with open(file_name, 'r', encoding='utf-8') as file:
         for i in json.load(file):
             if i.get('state') == 'EXECUTED':
                 data_base.append(i)
@@ -52,9 +51,9 @@ def get_where_from(transaction: dict) -> str:
         :param lst: list
         :return: str
         """
-        if len(lst[-1]) == 16 and lst[-1].isdigit:
+        if len(lst[-1]) == 16 and lst[-1].isdigit():
             lst[-1] = lst[-1][:4] + ' ' + lst[-1][4:6] + '** **** ' + lst[-1][-4:]
-        elif len(lst[-1]) > 16 and lst[-1].isdigit:
+        elif len(lst[-1]) > 16 and lst[-1].isdigit():
             lst[-1] = '**' + lst[-1][-4:]
         return ' '.join(lst)
 
